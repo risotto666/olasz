@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Olasz tanulás Rolival</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+      }
+      #container {
+        max-width: 100%;
+        margin: 3em auto;
+        margin-left: 10%;
+        text-align: center;
+        display: grid;
+        grid-template-columns: 20em 20em 20em 20em;
+      }
+      .card {
+        width: 200px;
+        height: 200px;
+        perspective: 1000px;
+        margin: 20px;
+      }
+      .card-inner {
+        width: 100%;
+        height: 100%;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+      }
+      .card.flipped .card-inner {
+        transform: rotateY(180deg);
+      }
+      .card-face {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        backface-visibility: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        border: 1px solid #ccc;
+        background-color: #fff;
+        border-radius: 8px;
+      }
+      .card-front {
+        transform: rotateY(0deg);
+      }
+      .card-back {
+        transform: rotateY(180deg);
+        background-color: #ccc;
+      }
+      .ok2 {
+        font-size: 22px;
+        text-align: center;
+        background-color: #ffffff;
+        box-shadow: 3px 3px black;
+        margin-left: 5%;
+        margin-top: 5%;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="ok2">Olasz-Magyar</button>
+    <div id="container">
+      <div class="card" onclick="flipCard(this)">
+        <div class="card-inner">
+          <div class="card-face card-front">fratello</div>
+          <div class="card-face card-back">fiútestvér</div>
+        </div>
+      </div>
+      <div class="card" onclick="flipCard(this)">
+        <div class="card-inner">
+          <div class="card-face card-front">sorella</div>
+          <div class="card-face card-back">lánytestvér</div>
+        </div>
+      </div>
+      <div class="card" onclick="flipCard(this)">
+        <div class="card-inner">
+          <div class="card-face card-front">figlio</div>
+          <div class="card-face card-back">lánya</div>
+        </div>
+      </div>
+      <div class="card" onclick="flipCard(this)">
+        <div class="card-inner">
+          <div class="card-face card-front">figlia</div>
+          <div class="card-face card-back">fia</div>
+        </div>
+      </div>
+      <div class="card" onclick="flipCard(this)">
+        <div class="card-inner">
+          <div class="card-face card-front">nonno</div>
+          <div class="card-face card-back">nagyapa</div>
+        </div>
+      </div>
+      <div class="card" onclick="flipCard(this)">
+        <div class="card-inner">
+          <div class="card-face card-front">nonna</div>
+          <div class="card-face card-back">nagymama</div>
+        </div>
+      </div>
+      <div class="card" onclick="flipCard(this)">
+        <div class="card-inner">
+          <div class="card-face card-front">uomo</div>
+          <div class="card-face card-back">férfi</div>
+        </div>
+      </div>
+      <div class="card" onclick="flipCard(this)">
+        <div class="card-inner">
+          <div class="card-face card-front">gabinetto</div>
+          <div class="card-face card-back">WC</div>
+        </div>
+      </div>
+      <div class="card" onclick="flipCard(this)">
+        <div class="card-inner">
+          <div class="card-face card-front">finestra</div>
+          <div class="card-face card-back">ablak</div>
+        </div>
+      </div>
+      <div class="card" onclick="flipCard(this)">
+        <div class="card-inner">
+          <div class="card-face card-front">sedia</div>
+          <div class="card-face card-back">szék</div>
+        </div>
+      </div>
+      <div class="card" onclick="flipCard(this)">
+        <div class="card-inner">
+          <div class="card-face card-front">letto</div>
+          <div class="card-face card-back">ágy</div>
+        </div>
+      </div>
+      <div class="card" onclick="flipCard(this)">
+        <div class="card-inner">
+          <div class="card-face card-front">tavolo</div>
+          <div class="card-face card-back">asztal</div>
+        </div>
+      </div>
+      <div class="card" onclick="flipCard(this)">
+        <div class="card-inner">
+          <div class="card-face card-front">camera da latto</div>
+          <div class="card-face card-back">hálószoba</div>
+        </div>
+      </div>
+      <div class="card" onclick="flipCard(this)">
+        <div class="card-inner">
+          <div class="card-face card-front">bagno</div>
+          <div class="card-face card-back">fürdőszoba</div>
+        </div>
+      </div>
+      <div class="card" onclick="flipCard(this)">
+        <div class="card-inner">
+          <div class="card-face card-front">soggiorno</div>
+          <div class="card-face card-back">nappali</div>
+        </div>
+      </div>
+      <div class="card" onclick="flipCard(this)">
+        <div class="card-inner">
+          <div class="card-face card-front">sala da pranzo</div>
+          <div class="card-face card-back">étkező</div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
